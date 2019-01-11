@@ -1,0 +1,40 @@
+body {
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+.list-employees {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.list-employees .rounded-circle {
+  height: 50px;
+  margin-right: 16px;
+}
+
+.list-employees .name {
+  text-transform: capitalize;
+}
+
+.list-employees .btn.btn-danger,
+.list-employees .btn.btn-danger:hover {
+  color: white;
+  margin-top: 6px;
+  min-width: 100px;
+}
+
+.pagination {
+  margin: 20px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white!important;
+}
