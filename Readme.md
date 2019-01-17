@@ -238,21 +238,17 @@ body {
 
 h1 {
   margin: 20px;
-
   text-align: center;
 }
 
 .list-employees {
   max-width: 600px;
-
   margin: auto;
-
   margin-bottom: 20px;
 }
 
 .list-employees .rounded-circle {
   height: 50px;
-
   margin-right: 16px;
 }
 
@@ -263,9 +259,7 @@ h1 {
 .list-employees .btn.btn-danger,
 .list-employees .btn.btn-danger:hover {
   color: white;
-
   margin-top: 6px;
-
   min-width: 100px;
 }
 
@@ -275,30 +269,21 @@ h1 {
 
 .pagination .page-item.active .page-link {
   background-color: #dc3545;
-
   border-color: #dc3545;
-
   color: white !important;
 }
 
 /* ETAPE 1 */
-
 .container-my-button {
   /* color:white;
-
 background-color: black; */
-
   /* ETAPE 2 */
-
   display: block;
-
   margin-left: auto;
-
   margin-right: auto;
 }
 
 /* ETAPE 3 */
-
 .working-hours {
   text-align: center;
 }
@@ -308,9 +293,7 @@ background-color: black; */
 
 ```js
 // Get the current page (default = "1")
-
 var page = new URL(location.href).searchParams.get("page");
-
 if (!page) {
   page = "1";
 }
@@ -318,11 +301,8 @@ if (!page) {
 // ETAPE 3
 
 // Check the time to know if you can contact the person or not.
-
 var hours = new Date().getHours();
-
 var minutes = new Date().getMinutes();
-
 if (hours >= 9 && hours < 18) {
   $(".working-hours").text(
     "Yes, it's " +
@@ -342,15 +322,12 @@ if (hours >= 9 && hours < 18) {
 }
 
 // Call the API "GET https://randomuser.me/api/"
-
 jQuery.get(
   `https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=${page}&results=10`,
   function(data) {
     for (let i = 0; i < data.results.length; i++) {
       var name = data.results[i].name.first + " " + data.results[i].name.last;
-
       var buttonText;
-
       if (data.results[i].gender === "male") {
         buttonText = "Hire him";
       } else {
@@ -358,25 +335,15 @@ jQuery.get(
       }
 
       // Add a new <li> tag in ".list-employees"
-
       $(".list-employees").append(`
-
 <li class="list-group-item">
-
 <img class="rounded-circle float-left" src="${data.results[i].picture.large}">
-
 <a class="btn btn-danger float-right" href="https://www.linkedin.com/search/results/index/?keywords=${name}" target="_blank">
-
 ${buttonText}
-
 <a/>
-
 <strong class="name">${name}</strong><br>
-
 ${data.results[i].email}
-
 </li>
-
 `);
     }
   }
