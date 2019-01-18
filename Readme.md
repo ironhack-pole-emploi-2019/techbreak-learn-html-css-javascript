@@ -48,7 +48,7 @@ Vous allez avoir besoin d'une éditeur de texte tel que [Visual Studio Code](htt
 
 1. Ouvrez `index.html` avec Chrome ou n'importe quel autre navigateur.
 2. Ajoutez un `<h2>` avec "_But is it the right time to do so ?_" et un `<p>` avec "_I don't know_".
-3. Ajouter une classe `working-hours` aux deux précédentes balises.
+3. Ajouter une classe `working-hour` aux deux précédentes balises et une classe `working-hours` à `<p>`.
 4. Dans `style.css`, ajouter à `.working-hours` la caractéristique `text-align: center`.
 5. Dans `main.js`, changez la variable `hours` à `20`, vous allez voir que la phrase affichée sera "_No, it's 20:00, you can't contact anyone outside of working hours but you can go grab a beer!_".
 6. Dans `main.js`, nous allons la variable `hours` à `Math.floor(24*Math.random())`. A chaque fois que vous rafraîchissez, l'heure affichée sera différente et le message s'adaptera à l'heure.
@@ -141,9 +141,9 @@ Vous allez avoir besoin d'une éditeur de texte tel que [Visual Studio Code](htt
 
       <!-- ETAPE 3 -->
 
-      <h2 class="working-hours">But is it the right time to do so ?</h2>
+      <h2 class="working-hour">But is it the right time to do so ?</h2>
 
-      <p class="working-hours">I don't know</p>
+      <p class="working-hour working-hours">I don't know</p>
 
       <!-- ETAPE 2 -->
 
@@ -284,7 +284,7 @@ background-color: black; */
 }
 
 /* ETAPE 3 */
-.working-hours {
+.working-hour {
   text-align: center;
 }
 ```
