@@ -36,5 +36,20 @@ h1 {
 .pagination .page-item.active .page-link {
   background-color: #dc3545;
   border-color: #dc3545;
-  color: white!important;
+  color: white !important;
+}
+
+/* ETAPE 1 */
+.container-my-button {
+  /* color:white;
+background-color: black; */
+  /* ETAPE 2 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ETAPE 3 */
+.working-hours {
+  text-align: center;
 }
